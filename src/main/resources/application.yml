@@ -1,0 +1,39 @@
+#配置端口
+server:
+  port: 6001
+  servlet:
+    context-path: /dynamic
+
+#设置数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      master:
+        url: jdbc:mysql://172.18.21.167:3306/xmjg_agcloud_1104?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: xmjg_agcloud
+        password: xmjg_agcloud
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      slave:
+        url: jdbc:mysql://172.18.21.168:3306/xmjg_agcloud_1104?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: xmjg_agcloud
+        password: xmjg_agcloud
+        driver-class-name: com.mysql.cj.jdbc.Driver
+      initial-size: 15
+      min-idle: 15
+      max-active: 200
+      max-wait: 60000
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: ""
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: false
+      connection-properties: false
+#mybatis-plus配置
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/com/**/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
