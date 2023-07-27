@@ -10,14 +10,14 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       master:
-        url: jdbc:mysql://172.18.21.167:3306/xmjg_agcloud_1104?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-        username: xmjg_agcloud
-        password: xmjg_agcloud
+        url: jdbc:mysql://xxxxxxx:3306/test_master?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: root
+        password: 123456
         driver-class-name: com.mysql.cj.jdbc.Driver
       slave:
-        url: jdbc:mysql://172.18.21.168:3306/xmjg_agcloud_1104?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
-        username: xmjg_agcloud
-        password: xmjg_agcloud
+        url: jdbc:mysql://xxxxx:3306/test_slave?characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull&useSSL=false
+        username: root
+        password: 123456
         driver-class-name: com.mysql.cj.jdbc.Driver
       initial-size: 15
       min-idle: 15
